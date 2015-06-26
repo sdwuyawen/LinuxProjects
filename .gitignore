@@ -1,1 +1,10 @@
 *.o
+
+*.IAB
+*.IAD
+*.IMB
+*.IMD
+*.PO
+*.PR
+*.PS
+*.WK3

@@ -9,6 +9,7 @@ int RegisterEncodingOpr(PT_EncodingOpr ptEncodingOpr)
 {
 	PT_EncodingOpr ptTmp;
 
+	/* ≤Â»ÎµΩ¡¥±ÌŒ≤ */
 	if (!g_ptEncodingOprHead)
 	{
 		g_ptEncodingOprHead   = ptEncodingOpr;

@@ -367,7 +367,10 @@ int ShowOnePage(unsigned char *pucTextFileMemCurPos)
 static void RecordPage(PT_PageDesc ptPageNew)
 {
 	PT_PageDesc ptPage;
-		
+
+	/* 插入到双向链表尾
+	 * 插入节点到双向链表中间需要调整4个指针，插入的尾部只需要调整3个
+	 */
 	if (!g_ptPages)
 	{
 		g_ptPages = ptPageNew;
