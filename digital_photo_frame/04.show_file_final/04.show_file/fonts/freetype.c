@@ -55,6 +55,8 @@ static int FreeTypeFontInit(char *pcFontFile, unsigned int dwFontSize)
 static int FreeTypeGetFontBitmap(unsigned int dwCode, PT_FontBitMap ptFontBitMap)
 {
 	int iError;
+
+	/* ×ÖÌå×óÏÂ½Ç×ø±ê */
 	int iPenX = ptFontBitMap->iCurOriginX;
 	int iPenY = ptFontBitMap->iCurOriginY;
 #if 0

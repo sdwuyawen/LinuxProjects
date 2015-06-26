@@ -9,6 +9,7 @@
 //#define COLOR_BACKGROUND   0xE7DBB5  /* 泛黄的纸 */
 //#define COLOR_FOREGROUND   0x514438  /* 褐色字体 */
 
+/* BGR */
 #define COLOR_BACKGROUND   0xE7DBB5  /* 泛黄的纸 */
 #define COLOR_FOREGROUND   0x384451  /* 褐色字体 */
 

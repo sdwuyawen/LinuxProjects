@@ -4638,6 +4638,7 @@ static int ASCIIFontInit(char *pcFontFile, unsigned int dwFontSize)
 
 static int ASCIIGetFontBitmap(unsigned int dwCode, PT_FontBitMap ptFontBitMap)
 {
+	/* 字体左下角坐标 */
 	int iPenX = ptFontBitMap->iCurOriginX;
 	int iPenY = ptFontBitMap->iCurOriginY;
 	
@@ -4647,6 +4648,7 @@ static int ASCIIGetFontBitmap(unsigned int dwCode, PT_FontBitMap ptFontBitMap)
 		return -1;
 	}
 
+	/* ptFontBitMap使用LCD坐标系 */
 	ptFontBitMap->iXLeft    = iPenX;
 	ptFontBitMap->iYTop     = iPenY - 16;
 	ptFontBitMap->iXMax     = iPenX + 8;
@@ -4655,6 +4657,7 @@ static int ASCIIGetFontBitmap(unsigned int dwCode, PT_FontBitMap ptFontBitMap)
 	ptFontBitMap->iPitch    = 1;
 	ptFontBitMap->pucBuffer = (unsigned char *)&fontdata_8x16[dwCode * 16];;	
 
+	/* 下一个要显示的bitmap的左下角坐标 */
 	ptFontBitMap->iNextOriginX = iPenX + 8;
 	ptFontBitMap->iNextOriginY = iPenY;
 	

@@ -13,7 +13,7 @@
 int main(int argc, char **argv)
 {
 	int iError;
-	unsigned int dwFontSize = 16;
+	unsigned int dwFontSize = 16;		/* 字体大小 */
 	char acHzkFile[128];
 	char acFreetypeFile[128];
 	char acTextFile[128];
@@ -23,7 +23,7 @@ int main(int argc, char **argv)
 	char cOpr;
 	int bList = 0;
 
-	acHzkFile[0]  = '\0';
+	acHzkFile[0]  = '\0';				/* 汉字库文件名 */
 	acFreetypeFile[0] = '\0';
 	acTextFile[0] = '\0';
 
@@ -71,6 +71,9 @@ int main(int argc, char **argv)
 		}
 	}
 
+	/* optind < argc说明含有不是选项的参数
+	 * optind >= argc说明所有参数都是选项
+	 */
 	if (!bList && (optind >= argc))
 	{
 		printf("Usage: %s [-s Size] [-d display] [-f font_file] [-h HZK] <text_file>\n", argv[0]);
@@ -114,7 +117,8 @@ int main(int argc, char **argv)
 
 	strncpy(acTextFile, argv[optind], 128);
 	acTextFile[127] = '\0';
-		
+
+	/* 打开文本文件，选择合适的编码，并把文件映射到内存 */
 	iError = OpenTextFile(acTextFile);
 	if (iError)
 	{
@@ -122,10 +126,10 @@ int main(int argc, char **argv)
 		return -1;
 	}
 
-	iError = SetTextDetail(acHzkFile, acFreetypeFile, dwFontSize);
+	iError = SetFontDetail(acHzkFile, acFreetypeFile, dwFontSize);
 	if (iError)
 	{
-		printf("SetTextDetail error!\n");
+		printf("SetFontDetail error!\n");
 		return -1;
 	}
 

@@ -75,7 +75,7 @@ int OpenTextFile(char *pcFileName)
 }
 
 
-int SetTextDetail(char *pcHZKFile, char *pcFileFreetype, unsigned int dwFontSize)
+int SetFontDetail(char *pcHZKFile, char *pcFileFreetype, unsigned int dwFontSize)
 {
 	int iError = 0;
 	PT_FontOpr ptFontOpr;
@@ -84,7 +84,7 @@ int SetTextDetail(char *pcHZKFile, char *pcFileFreetype, unsigned int dwFontSize
 
 	g_dwFontSize = dwFontSize;
 	
-
+	/* 遍历编码支持的字体链表，初始化字体链表中所有字体 */
 	ptFontOpr = g_ptEncodingOprForFile->ptFontOprSupportedHead;
 	while (ptFontOpr)
 	{
@@ -114,6 +114,7 @@ int SetTextDetail(char *pcHZKFile, char *pcFileFreetype, unsigned int dwFontSize
 		}
 		else
 		{
+			/* 对于编码支持的链表中初始化失败的字体，从编码支持的链表中删除 */
 			DelFontOprFrmEncoding(g_ptEncodingOprForFile, ptFontOpr);
 		}
 		ptFontOpr = ptTmp;
@@ -178,6 +179,7 @@ int RelocateFontPos(PT_FontBitMap ptFontBitMap)
 			iDeltaX = 0 - ptFontBitMap->iCurOriginX;
 			iDeltaY = iLcdY - ptFontBitMap->iCurOriginY;
 
+			/* 偏移调整 */
 			ptFontBitMap->iCurOriginX  += iDeltaX;
 			ptFontBitMap->iCurOriginY  += iDeltaY;
 
@@ -207,9 +209,12 @@ int ShowOneFont(PT_FontBitMap ptFontBitMap)
 	
 	if (ptFontBitMap->iBpp == 1)
 	{
+		/* 扫描所有行 */
 		for (y = ptFontBitMap->iYTop; y < ptFontBitMap->iYMax; y++)
 		{
+			/* 该行bitmap首地址 */
 			i = (y - ptFontBitMap->iYTop) * ptFontBitMap->iPitch;
+			/* 行内所有点 */
 			for (x = ptFontBitMap->iXLeft, bit = 7; x < ptFontBitMap->iXMax; x++)
 			{
 				if (bit == 7)
@@ -320,7 +325,8 @@ int ShowOnePage(unsigned char *pucTextFileMemCurPos)
 		}
 
 		DBG_PRINTF("dwCode = 0x%x\n", dwCode);
-		
+
+		/* 尝试编码支持的所有字体，直到有一种成功获得点阵 */
 		ptFontOpr = g_ptEncodingOprForFile->ptFontOprSupportedHead;
 		while (ptFontOpr)
 		{
@@ -405,12 +411,14 @@ int ShowNextPage(void)
 	DBG_PRINTF("%s %d, %d\n", __FUNCTION__, __LINE__, iError);
 	if (iError == 0)
 	{
+		/* 调整g_ptCurPage为当前页 */
 		if (g_ptCurPage && g_ptCurPage->ptNextPage)
 		{
 			g_ptCurPage = g_ptCurPage->ptNextPage;
 			return 0;
 		}
-		
+
+		/* 构造当前页 */
 		ptPage = malloc(sizeof(T_PageDesc));
 		if (ptPage)
 		{
@@ -446,6 +454,7 @@ int ShowPrePage(void)
 	if (iError == 0)
 	{
 		DBG_PRINTF("%s %d\n", __FUNCTION__, __LINE__);
+		/* 调整g_ptCurPage为当前页 */
 		g_ptCurPage = g_ptCurPage->ptPrePage;
 	}
 	return iError;

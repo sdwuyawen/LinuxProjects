@@ -56,6 +56,7 @@ static int GBKGetFontBitmap(unsigned int dwCode, PT_FontBitMap ptFontBitMap)
 	int iArea;
 	int iWhere;
 
+	/* ×ÖÌå×óÏÂ½Ç×ø±ê */
 	int iPenX = ptFontBitMap->iCurOriginX;
 	int iPenY = ptFontBitMap->iCurOriginY;
 

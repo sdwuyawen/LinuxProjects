@@ -1,6 +1,0 @@
----- "freetype" Æ¥Åä (5 in 5 ÎÄ¼þ) ----
-Ascii.c (encoding):	AddFontOprForEncoding(&g_tAsciiEncodingOpr, GetFontOpr("freetype"));
-Freetype.c (fonts):	.name          = "freetype",
-Utf-16be.c (encoding):	AddFontOprForEncoding(&g_tUtf16beEncodingOpr, GetFontOpr("freetype"));
-Utf-16le.c (encoding):	AddFontOprForEncoding(&g_tUtf16leEncodingOpr, GetFontOpr("freetype"));
-Utf-8.c (encoding):	AddFontOprForEncoding(&g_tUtf8EncodingOpr, GetFontOpr("freetype"));

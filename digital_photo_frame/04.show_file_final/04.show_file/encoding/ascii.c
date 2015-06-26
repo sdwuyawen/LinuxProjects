@@ -36,6 +36,7 @@ static int isAsciiCoding(unsigned char *pucBufHead)
 	}
 	else
 	{
+		/* Ö§³Ö */
 		return 1;
 	}
 }
