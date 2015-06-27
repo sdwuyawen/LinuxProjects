@@ -31,6 +31,9 @@ obj-y += draw/
 obj-y += encoding/
 obj-y += fonts/
 
+# -C指定要进入并执行make的目录
+# -f指定非标准的Makefile文件名
+# all首先进入顶层目录，并以Makefile.build作为Makefile，执行make
 all : 
 	make -C ./ -f $(TOPDIR)/Makefile.build
 	$(CC) $(LDFLAGS) -o $(TARGET) built-in.o
