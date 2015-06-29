@@ -187,7 +187,7 @@ int main(int argc, char **argv)
 			}
 			else if (tInputEvent.iVal == INPUT_VALUE_UNKNOWN)
 			{
-				ShowPrePage();			
+		
 			}
 			else 
 			{

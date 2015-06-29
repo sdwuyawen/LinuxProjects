@@ -17,18 +17,21 @@ static T_InputOpr g_tStdinOpr = {
 
 static int StdinDevInit(void)
 {
-    struct termios tTTYState;
- 
-    //get the terminal state
-    tcgetattr(STDIN_FILENO, &tTTYState);
- 
-    //turn off canonical mode
-    tTTYState.c_lflag &= ~ICANON;
-    //minimum of number input read.
-    tTTYState.c_cc[VMIN] = 1;   /* 有一个数据时就立刻返回 */
+	struct termios tTTYState;
 
-    //set the terminal attributes.
-    tcsetattr(STDIN_FILENO, TCSANOW, &tTTYState);
+	//get the terminal state
+	tcgetattr(STDIN_FILENO, &tTTYState);
+
+	//turn off canonical mode
+	tTTYState.c_lflag &= ~ICANON;
+	//minimum of number input read.
+	tTTYState.c_cc[VMIN] = 1;   /* 有一个数据时就立刻返回 */
+
+	//set the terminal attributes.
+	tcsetattr(STDIN_FILENO, TCSANOW, &tTTYState);
+
+	/* 文件句柄 */
+	g_tStdinOpr.iFd = STDIN_FILENO;
 
 	return 0;
 }

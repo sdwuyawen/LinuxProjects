@@ -23,7 +23,7 @@ export CFLAGS LDFLAGS
 TOPDIR := $(shell pwd)
 export TOPDIR
 
-TARGET := show_file_input
+TARGET := show_file_input_button_select
 
 obj-y += main.o
 obj-y += display/

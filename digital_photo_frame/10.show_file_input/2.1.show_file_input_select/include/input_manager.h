@@ -21,6 +21,7 @@ typedef struct InputEvent {
 
 typedef struct InputOpr {
 	char *name;
+	int iFd;
 	int (*DeviceInit)(void);
 	int (*DeviceExit)(void);
 	int (*GetInputEvent)(PT_InputEvent ptInputEvent);

@@ -11,6 +11,8 @@ static struct tsdev *g_tTSDev;
 static int giXres;
 static int giYres;
 
+static T_InputOpr g_tTouchScreenOpr;
+
 /* 注意: 由于要用到LCD的分辨率, 此函数要在SelectAndInitDisplay之后调用 */
 static int TouchScreenDevInit(void)
 {
@@ -39,6 +41,9 @@ static int TouchScreenDevInit(void)
 	{
 		return -1;
 	}
+
+	/* 返回文件句柄 */
+	g_tTouchScreenOpr.iFd = ts_fd(g_tTSDev);
 
 	return 0;
 }
