@@ -1,5 +1,5 @@
 touchscreen.o: touchscreen.c \
- /home/wu/workspace/linux_projects/digital_photo_frame/10.show_file_input/10.show_file_input_query/include/config.h \
+ /home/wu/workspace/linux_projects/digital_photo_frame/10.show_file_input/10.2.show_file_input_button_query/include/config.h \
  /home/wu/workspace/arm-jyxtec-linux-gnueabi/bin/../arm-jyxtec-linux-gnueabi/sysroot/usr/include/stdio.h \
  /home/wu/workspace/arm-jyxtec-linux-gnueabi/bin/../arm-jyxtec-linux-gnueabi/sysroot/usr/include/features.h \
  /home/wu/workspace/arm-jyxtec-linux-gnueabi/bin/../arm-jyxtec-linux-gnueabi/sysroot/usr/include/sys/cdefs.h \
@@ -16,7 +16,7 @@ touchscreen.o: touchscreen.c \
  /home/wu/workspace/arm-jyxtec-linux-gnueabi/bin/../arm-jyxtec-linux-gnueabi/sysroot/usr/include/bits/sys_errlist.h \
  /home/wu/workspace/arm-jyxtec-linux-gnueabi/bin/../arm-jyxtec-linux-gnueabi/sysroot/usr/include/bits/stdio.h \
  /home/wu/workspace/arm-jyxtec-linux-gnueabi/bin/../arm-jyxtec-linux-gnueabi/sysroot/usr/include/bits/stdio2.h \
- /home/wu/workspace/linux_projects/digital_photo_frame/10.show_file_input/10.show_file_input_query/include/input_manager.h \
+ /home/wu/workspace/linux_projects/digital_photo_frame/10.show_file_input/10.2.show_file_input_button_query/include/input_manager.h \
  /home/wu/workspace/arm-jyxtec-linux-gnueabi/bin/../arm-jyxtec-linux-gnueabi/sysroot/usr/include/sys/time.h \
  /home/wu/workspace/arm-jyxtec-linux-gnueabi/bin/../arm-jyxtec-linux-gnueabi/sysroot/usr/include/time.h \
  /home/wu/workspace/arm-jyxtec-linux-gnueabi/bin/../arm-jyxtec-linux-gnueabi/sysroot/usr/include/bits/time.h \
@@ -33,4 +33,4 @@ touchscreen.o: touchscreen.c \
  /home/wu/workspace/arm-jyxtec-linux-gnueabi/bin/../arm-jyxtec-linux-gnueabi/sysroot/usr/include/alloca.h \
  /home/wu/workspace/arm-jyxtec-linux-gnueabi/bin/../arm-jyxtec-linux-gnueabi/sysroot/usr/include/bits/stdlib.h \
  /home/wu/workspace/arm-jyxtec-linux-gnueabi/bin/../lib/gcc/arm-jyxtec-linux-gnueabi/4.4.6/../../../../arm-jyxtec-linux-gnueabi/include/tslib.h \
- /home/wu/workspace/linux_projects/digital_photo_frame/10.show_file_input/10.show_file_input_query/include/draw.h
+ /home/wu/workspace/linux_projects/digital_photo_frame/10.show_file_input/10.2.show_file_input_button_query/include/draw.h

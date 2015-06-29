@@ -1,5 +1,5 @@
 stdin.o: stdin.c \
- /home/wu/workspace/linux_projects/digital_photo_frame/10.show_file_input/10.show_file_input_query/include/input_manager.h \
+ /home/wu/workspace/linux_projects/digital_photo_frame/10.show_file_input/10.2.show_file_input_button_query/include/input_manager.h \
  /home/wu/workspace/arm-jyxtec-linux-gnueabi/bin/../arm-jyxtec-linux-gnueabi/sysroot/usr/include/sys/time.h \
  /home/wu/workspace/arm-jyxtec-linux-gnueabi/bin/../arm-jyxtec-linux-gnueabi/sysroot/usr/include/features.h \
  /home/wu/workspace/arm-jyxtec-linux-gnueabi/bin/../arm-jyxtec-linux-gnueabi/sysroot/usr/include/sys/cdefs.h \
