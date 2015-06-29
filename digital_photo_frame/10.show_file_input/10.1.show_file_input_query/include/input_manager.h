@@ -36,6 +36,6 @@ int GetInputEvent(PT_InputEvent ptInputEvent);
 
 int StdinInit(void);
 int TouchScreenInit(void);
-int ButtonInit(void);
+//int ButtonInit(void);
 
 #endif /* _INPUT_MANAGER_H */

@@ -1,5 +1,5 @@
 ascii.o: ascii.c \
- /home/wu/workspace/linux_projects/digital_photo_frame/10.show_file_input/10.show_file_input_query/include/config.h \
+ /home/wu/workspace/linux_projects/digital_photo_frame/10.show_file_input/10.1.show_file_input_query/include/config.h \
  /home/wu/workspace/arm-jyxtec-linux-gnueabi/bin/../arm-jyxtec-linux-gnueabi/sysroot/usr/include/stdio.h \
  /home/wu/workspace/arm-jyxtec-linux-gnueabi/bin/../arm-jyxtec-linux-gnueabi/sysroot/usr/include/features.h \
  /home/wu/workspace/arm-jyxtec-linux-gnueabi/bin/../arm-jyxtec-linux-gnueabi/sysroot/usr/include/sys/cdefs.h \
@@ -16,4 +16,4 @@ ascii.o: ascii.c \
  /home/wu/workspace/arm-jyxtec-linux-gnueabi/bin/../arm-jyxtec-linux-gnueabi/sysroot/usr/include/bits/sys_errlist.h \
  /home/wu/workspace/arm-jyxtec-linux-gnueabi/bin/../arm-jyxtec-linux-gnueabi/sysroot/usr/include/bits/stdio.h \
  /home/wu/workspace/arm-jyxtec-linux-gnueabi/bin/../arm-jyxtec-linux-gnueabi/sysroot/usr/include/bits/stdio2.h \
- /home/wu/workspace/linux_projects/digital_photo_frame/10.show_file_input/10.show_file_input_query/include/fonts_manager.h
+ /home/wu/workspace/linux_projects/digital_photo_frame/10.show_file_input/10.1.show_file_input_query/include/fonts_manager.h

@@ -80,7 +80,7 @@ int InputInit(void)
 	
 	iError = StdinInit();
 	iError += TouchScreenInit();
-	iError +=ButtonInit();
+//	iError +=ButtonInit();
 
 	return iError;
 }
