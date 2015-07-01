@@ -39,12 +39,12 @@ static int TouchScreenDevInit(void)
 	}
 
 	if (!g_tTSDev) {
-		DBG_PRINTF("ts_open error!\n");
+		printf("ts_open error!\n");
 		return -1;
 	}
 
 	if (ts_config(g_tTSDev)) {
-		DBG_PRINTF("ts_config error!\n");
+		printf("ts_config error!\n");
 		return -1;
 	}
 
