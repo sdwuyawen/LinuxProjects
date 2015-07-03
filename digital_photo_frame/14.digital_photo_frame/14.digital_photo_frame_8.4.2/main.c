@@ -59,6 +59,7 @@ int main(int argc, char **argv)
 		printf("DisplayInit error!\n");
 		return -1;
 	}
+	SelectDefaultDispDev("fb");
 
 	ptDispOpr = GetDispOpr("fb");
 	ptDispOpr->DeviceInit();
